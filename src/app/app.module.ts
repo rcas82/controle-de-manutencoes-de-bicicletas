@@ -8,6 +8,9 @@ import { SegundoComponent } from './segundo/segundo.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BikeComponent } from './bike/bike.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { LoginComponent } from './login/login.component';
     SegundoComponent,
     FooterComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    PageNotFoundComponent,
+    BikeComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

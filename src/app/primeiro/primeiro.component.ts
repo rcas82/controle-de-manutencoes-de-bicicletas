@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-primeiro',
@@ -7,26 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrimeiroComponent implements OnInit {
 
-  imageURL: string = './assets/resources/maintenance-advertising.png';
-  isHidePalnel = true;
-  constructor() { }
+  teste = 'Aguardando...';
 
-  getBackgroundImage() {
-    return {
-      'position': 'absolute',
-      'left': '0',
-      'top': '0',
-      'width': '100%',
-      'height': '100vh',
-      'background-repeat': 'no-repeat',
-      'background-attachment': 'fixed',
-      'background-position': 'center',
-      'background-image': 'url(' + this.imageURL + ')',
-      'opacity': '0.3'
-    };
-  }
+  constructor( private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    this.teste = this.route.snapshot.paramMap.get( 'teste' ) || 'Nenhum parâmetro recebido!';
   }
-
 }
