@@ -1,0 +1,4 @@
+{
+  "/bicicletas": "/bikes",
+  "/bicicletas/:nome": "/bikes?nome=:nome"
+}
